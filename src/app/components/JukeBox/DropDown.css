@@ -1,0 +1,55 @@
+.dropdown-wrapper {
+    position: relative;
+    width: 80px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: #f0f0f0;
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.dropdown-menu.show {
+  max-height: 500px; /* 충분히 크게 */
+}
+
+.dropdown-menu li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background-color: #ddd;
+}
+
+.dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80px;
+  padding: 6px 10px;  
+  cursor: pointer;
+  background: white;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  height: 34px;
+  z-index: 2;
+}
+
+.label {
+    flex: 1;
+}
+
+.arrow {
+    width: 10px;
+    text-align: right;
+}
