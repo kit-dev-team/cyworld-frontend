@@ -1,8 +1,7 @@
+import MiniHome from './components/MiniHome/MiniHome';
 
-export default function Home() {
+export default function MiniHomePage() {
   return (
-    <div>
-
-    </div>
+      <MiniHome />
   );
 }
