@@ -1,0 +1,43 @@
+/* BGM 텍스트 임시 스타일 */
+  .bgm p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(6, 170, 247);
+  }
+
+.bgm-play-wrapper {
+    background-color: #e0e0e0;
+    border: 1px solid rgb(177, 176, 176);
+    padding: 12px;
+    width: 350px;
+    height: 100px;
+}
+
+.current-playlist-wrapper {
+    background-color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+  }
+
+.current-playlist-wrapper p {
+    font-size: 14px;
+    text-align: center;
+}
+
+.play-button {
+    text-align: center;
+}
+
+.play-button button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.play-button button:hover {
+  background-color: #ccc;
+}

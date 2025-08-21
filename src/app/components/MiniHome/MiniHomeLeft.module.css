@@ -1,0 +1,42 @@
+.profile {
+  width: 200px;
+  height: 200px;
+  border-radius: 10%;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsrJcCOLI-BaJSGZnWy8VFMprPGFRSkbr-3g&s");
+  background-size: cover;
+  background-position: center;
+}
+
+.divider {
+  border: none;
+  border-top: 5px dotted #ccc;
+  width: 200px;
+}
+
+.state-message-box {
+  background-color: white;
+  border: 1px solid rgb(177, 176, 176);
+  font-size: 13px;
+  text-align: center;
+  word-wrap: break-word;
+  border-radius: 3%;
+}
+
+.introduction-wrapper {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.user-information-wrapper {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.neighbor-box {
+  background-color: white;
+  border: 1px solid rgb(177, 176, 176);
+  font-size: 13px;
+  text-align: center;
+  word-wrap: break-word;
+  border-radius: 3%;
+}
