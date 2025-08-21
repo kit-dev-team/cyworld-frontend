@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./MiniHome.module.css";
+import styles from "./MiniHomeLeft.module.css";
 
 const MiniHomeLeft: React.FC = () => {
   return (

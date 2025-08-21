@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import MenuTab from "./components/MenuTab/MenuTab";
 import "./globals.css";
+import styles from "./layout.module.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,9 +26,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <div className="background-1">
-          <div className="background-2">{children}</div>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <div className={styles["background-1"]}>
+          <div className={styles["background-2"]}>
+            <header className={styles.header}>
+              <div className={styles.users}>
+                <p>TODAY 1 | TOTAL 2025</p>
+              </div>
+              <div className={styles["top-message"]}>
+                <p>내가 최고짱이다~~</p>
+              </div>
+            </header>
+            <div className={styles["children-wrapper"]}>
+              {children}
+              <MenuTab />
+            </div>
+          </div>
         </div>
       </body>
     </html>

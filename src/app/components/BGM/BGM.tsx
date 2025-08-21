@@ -1,22 +1,27 @@
-'use client';
+"use client";
 
-import React, { useRef, useState, useEffect } from 'react';
-import bgmStyles from './BGM.module.css';
-type PlaylistItem = {
-  title: string;
-  src: string;
-};
+import React, { useRef, useEffect } from "react";
+import { useAtom } from "jotai";
+import { isPlayingAtom, curTrackAtom } from "../../store/bgmStore";
+import bgmStyles from "./BGM.module.css";
 
-const playlist: PlaylistItem[] = [
+const playlist = [
   {
-    title: '임정희 Golden Lady (feat.현아)',
-    src: 'bgm/Golden Lady.mp3',
+    title: "임정희 Golden Lady (feat.현아)",
+    src: "bgm/Golden Lady.mp3",
   },
 ];
 
 const Bgm: React.FC = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useAtom(isPlayingAtom);
+  const [curTrack, setCurTrack] = useAtom(curTrackAtom);
+
+  useEffect(() => {
+    if (!curTrack) {
+      setCurTrack(playlist[0]);
+    }
+  }, [curTrack, setCurTrack]);
 
   const togglePlayPause = () => {
     if (!audioRef.current) return;
@@ -41,20 +46,20 @@ const Bgm: React.FC = () => {
   }, []);
 
   return (
-    <div className={bgmStyles['bgm-section']}>
+    <div className={bgmStyles["bgm-section"]}>
       <div className={bgmStyles.bgm}>
         <p>BGM</p>
       </div>
-      <div className={bgmStyles['bgm-play-wrapper']}>
-        <div className={bgmStyles['current-playlist-wrapper']}>
-          <p>{playlist[0].title}</p>
+      <div className={bgmStyles["bgm-play-wrapper"]}>
+        <div className={bgmStyles["current-playlist-wrapper"]}>
+          <p>{curTrack?.title}</p>
         </div>
-        <div className={bgmStyles['play-button']}>
+        <div className={bgmStyles["play-button"]}>
           <button onClick={togglePlayPause}>
-            {isPlaying ? '■ 일시정지' : '▶️ 재생'}
+            {isPlaying ? "■ 일시정지" : "▶️ 재생"}
           </button>
         </div>
-        <audio ref={audioRef} src={playlist[0].src} />
+        {curTrack?.src && <audio ref={audioRef} src={curTrack.src} />}
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import Bgm from "../BGM/BGM";
-import styles from "./MiniHome.module.css";
+import styles from "./MiniHomeRight.module.css";
 
 const MiniHomeRight: React.FC = () => {
   return (
