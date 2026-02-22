@@ -1,0 +1,107 @@
+.jukebox-left {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    height: 500px;
+}
+
+.jukebox-title {
+    color: #50D8D8;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.search-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    align-items: center;
+}
+
+.input-search input {
+    border: 1px solid #ccc;
+    width: 200px;
+    height: 30px;
+}
+
+.search p {
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.song-info-wrapper {
+    margin-top: 40px;
+}
+
+.song-info-header {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    justify-content: center;
+}
+
+.song-info {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    justify-content: center;
+}
+
+.song-info-header .number,
+.song-info-header .title,
+.song-info-header .artist {
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    height: 30px;
+}
+
+.song-info .number,
+.song-info .title,
+.song-info .artist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+}
+
+.number {
+    width: 50px;
+}
+
+.title {
+    width: 450px;
+}
+
+.artist {
+    width: 200px;
+}
+
+.song-divider {
+    width: 710px;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.page-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.page p {
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+}
